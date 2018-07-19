@@ -1,11 +1,10 @@
-package algorithm;
+package data;
 
-public class ShowMatrix {
-    double[][] matrix;
-    public ShowMatrix(double[][] matrix) {
-        this.matrix = matrix;
-    }
-    public void show(){
+public class MatrixCreator {
+    protected final int numberOfStates = 2;
+    protected final int numberOfObservations = 3;
+
+    public void showMatrix(double[][] matrix){
         String line;
         for(int v=0; v<matrix.length; v++){
             line="";

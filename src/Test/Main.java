@@ -4,6 +4,7 @@ import algorithm.*;
 
 public class Main {
     public static void main(String[] args) {
+        //from article SanJose
         double[][] matrixA = {{0.7, 0.3},{0.4, 0.6}};
         double[][] matrixB = {{0.1,0.4,0.5},{0.7,0.2,0.1}};
         double[] matrixPi = {0.6, 0.4};

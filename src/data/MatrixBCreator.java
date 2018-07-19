@@ -1,4 +1,4 @@
-package algorithm;
+package data;
 
 public class MatrixBCreator extends MatrixCreator {
 

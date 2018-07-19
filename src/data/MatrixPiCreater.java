@@ -1,4 +1,4 @@
-package algorithm;
+package data;
 
 public class MatrixPiCreater extends MatrixCreator{
     double[] pi = new double[numberOfStates];
