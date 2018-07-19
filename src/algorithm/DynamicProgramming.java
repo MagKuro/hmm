@@ -36,6 +36,7 @@ public class DynamicProgramming {
                 for(int j = 0; j<numberOfStates; j++){
                     double actualDelta = deltaMatrix[t-1][j]*aMatrix[j][i]*bMatrix[i][observations[t]];
                     if(max<actualDelta){
+                        max = actualDelta;
                         deltaMatrix[t][i]=actualDelta;
                         sequence[i] = previousSequence[j]+i;
                     }

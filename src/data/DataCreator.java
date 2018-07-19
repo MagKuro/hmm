@@ -7,9 +7,9 @@ public class DataCreator {
     private int[] snowfallMatrix = new int[numberOfDays];
     private int[] cancellationMatrix  = new int[numberOfDays];
 
-    public void readFromFile(){
+    public void readFromFile(String fileName){
         try {
-            FileReader fr = new FileReader("data2017.csv");
+            FileReader fr = new FileReader(fileName);
             BufferedReader br = new BufferedReader(fr);
             String currentLine;
             int numberOfLine = 0;
@@ -36,11 +36,11 @@ public class DataCreator {
                 }
                 //odwołane i odbyte loty
                 if(currentTab.length>1){
-                    //0 - lot odwołany
+                    //1 - lot odwołany
                     cancellationMatrix[numberOfLine] = 1;
                 }
                 else{
-                    //1 - lot odbyty
+                    //0 - lot odbyty
                     cancellationMatrix[numberOfLine] = 0;
                 }
 

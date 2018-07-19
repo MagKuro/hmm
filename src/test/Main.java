@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import algorithm.*;
 
@@ -18,10 +18,10 @@ public class Main {
         double[][] betaMatrix = betaPassAlgorithm.doBetaPassAlgorithm();
         Gamma gamma = new Gamma(alfaMatrix, betaMatrix, probabilityOfObservation);
         gamma.countGamma();
-        System.out.println("Sekwencja najbardzej prawdopodobnych stanów to: "+gamma.findTheMostProbabilityStates());
+        System.out.println("Sekwencja najbardzej prawdopodobnych stanów to: "+gamma.findTheMostProbabilityStates()); //1010
 
         DynamicProgramming dynamicProgramming = new DynamicProgramming(matrixA, matrixB, matrixPi, sequenceObservation);
-        System.out.println("Najbardziej prawdopodobna sekwencja stanów to: "+dynamicProgramming.doDynamicProgramming());
+        System.out.println("Najbardziej prawdopodobna sekwencja stanów to: "+dynamicProgramming.doDynamicProgramming()); //1110
 
     }
 }
