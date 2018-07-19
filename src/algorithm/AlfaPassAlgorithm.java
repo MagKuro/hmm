@@ -7,7 +7,8 @@ public class AlfaPassAlgorithm {
     private int[] observations;
     private double[][] alfaMatrix;
     private int lengthOfObservation;
-    private int numberOfStates ;
+    private int numberOfStates;
+
 
     public AlfaPassAlgorithm(double[][] aMatrix, double[][] bMatrix, double[] piMatrix, int[] observations){
         this.aMatrix = aMatrix;

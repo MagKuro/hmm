@@ -1,9 +1,6 @@
 package Test;
 
-import algorithm.AlfaPassAlgorithm;
-import algorithm.BetaPassAlgorithm;
-import algorithm.Gamma;
-import algorithm.ShowMatrix;
+import algorithm.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,8 +16,11 @@ public class Main {
         BetaPassAlgorithm betaPassAlgorithm = new BetaPassAlgorithm(matrixA, matrixB, matrixPi, sequenceObservation);
         double[][] betaMatrix = betaPassAlgorithm.doBetaPassAlgorithm();
         Gamma gamma = new Gamma(alfaMatrix, betaMatrix, probabilityOfObservation);
-        ShowMatrix showMatrix = new ShowMatrix(gamma.countGamma());
-        showMatrix.show();
+        gamma.countGamma();
+        System.out.println("Sekwencja najbardzej prawdopodobnych stanów to: "+gamma.findTheMostProbabilityStates());
+
+        DynamicProgramming dynamicProgramming = new DynamicProgramming(matrixA, matrixB, matrixPi, sequenceObservation);
+        System.out.println("Najbardziej prawdopodobna sekwencja stanów to: "+dynamicProgramming.doDynamicProgramming());
 
     }
 }
