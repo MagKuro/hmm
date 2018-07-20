@@ -2,7 +2,7 @@ package data;
 
 public class MatrixCreator {
     protected final int numberOfStates = 2;
-    protected final int numberOfObservations = 3;
+    protected final int numberOfObservations = 4;
 
     public void showMatrix(double[][] matrix){
         String line;
